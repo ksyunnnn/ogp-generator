@@ -150,7 +150,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>OGPジェネレーター🍠</h1>
+      <h1>
+        OGPジェネレーター
+        <span role="img" aria-label="imo">
+          🍠
+        </span>
+      </h1>
       <div className="input">
         <input
           value={main.title}
@@ -162,9 +167,13 @@ const App = () => {
         />
         <button onClick={handleDisplayValue} name="main">
           {main.display ? (
-            <span id="mieru">👀</span>
+            <span role="img" aria-label="mieru">
+              👀
+            </span>
           ) : (
-            <span id="miezaru">🐒</span>
+            <span role="img" aria-label="miezaru">
+              🐒
+            </span>
           )}
         </button>
       </div>
@@ -179,9 +188,13 @@ const App = () => {
         />
         <button onClick={handleDisplayValue} name="sub">
           {sub.display ? (
-            <span id="mieru">👀</span>
+            <span role="img" aria-label="mieru">
+              👀
+            </span>
           ) : (
-            <span id="miezaru">🐒</span>
+            <span role="img" aria-label="miezaru">
+              🐒
+            </span>
           )}
         </button>
       </div>
