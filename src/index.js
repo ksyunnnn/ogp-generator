@@ -204,7 +204,7 @@ const App = () => {
         width={canvasSize.width}
         height={canvasSize.height}
       />
-      <a href={dataURL} download="" className="btn">
+      <a href={dataURL} target="_blank" download="" className="btn">
         download
       </a>
     </div>
