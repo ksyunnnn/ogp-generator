@@ -1,13 +1,13 @@
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 120px);
+  grid-template-columns: repeat(auto-fill, 40px);
   grid-gap: 8px;
 }
 
 .btn {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #757575;
   text-align: center;
   letter-spacing: 0.5px;
   -webkit-transition: background-color 0.2s ease-out;

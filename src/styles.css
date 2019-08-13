@@ -4,15 +4,60 @@
   padding: 0;
 }
 
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6em;
+}
+
 .app {
   display: grid;
-  padding: 40px;
+  padding: 80px 16px;
   row-gap: 24px;
-  width: 60vw;
+  max-width: 740px;
   justify-content: center;
   margin: auto;
 }
 
 canvas {
   width: 100%;
+}
+
+input {
+  height: 2em;
+  padding: 4px 8px;
+  outline-width: thin;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  color: inherit;
+}
+
+input.hidden {
+  background-color: #eee;
+  color: rgb(189, 189, 189);
+}
+
+div.input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.input button {
+  margin-left: 0.8em;
+  cursor: pointer;
+  outline: thin;
+  border: none;
+  padding: 4px;
+  font-size: 1.2em;
+  background: none;
+}
+
+div.input button span {
+  pointer-events: none;
 }
