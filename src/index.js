@@ -32,13 +32,13 @@ const usePersistentCanvas = () => {
 
   const [titleValue, setTitleValue] = useState({
     main: {
-      title: "OGP IS ゴッド",
+      title: "テキストだけでOGP",
       size: 80,
       baseline: "bottom",
       display: true
     },
     sub: {
-      title: "爆速のジェネレーターへの挑戦",
+      title: "OGP画像ジェネレーター🍠",
       size: 48,
       baseline: "top",
       display: true
@@ -151,7 +151,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>
-        OGPジェネレーター
+        OGP画像ジェネレーター
         <span role="img" aria-label="imo">
           🍠
         </span>
