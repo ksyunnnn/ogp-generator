@@ -149,65 +149,78 @@ const App = () => {
   const handlePickColor = k => setPickColor(colors[k]);
 
   return (
-    <div className="app">
-      <h1>
-        OGP画像ジェネレーター
-        <span role="img" aria-label="imo">
-          🍠
-        </span>
-      </h1>
-      <div className="input">
-        <input
-          value={main.title}
-          type="text"
-          name="main"
-          onChange={handleTitleValue}
-          className={`${main.display ? "" : "hidden"}`}
-          disabled={!main.display}
+    <>
+      <div className="app">
+        <h1>
+          OGP画像ジェネレーター
+          <span role="img" aria-label="imo">
+            🍠
+          </span>
+        </h1>
+        <div className="input">
+          <input
+            value={main.title}
+            type="text"
+            name="main"
+            onChange={handleTitleValue}
+            className={`${main.display ? "" : "hidden"}`}
+            disabled={!main.display}
+          />
+          <button onClick={handleDisplayValue} name="main">
+            {main.display ? (
+              <span role="img" aria-label="mieru">
+                👀
+              </span>
+            ) : (
+              <span role="img" aria-label="miezaru">
+                🐒
+              </span>
+            )}
+          </button>
+        </div>
+        <div className="input">
+          <input
+            value={sub.title}
+            type="text"
+            name="sub"
+            onChange={handleTitleValue}
+            className={`${sub.display ? "" : "hidden"}`}
+            disabled={!sub.display}
+          />
+          <button onClick={handleDisplayValue} name="sub">
+            {sub.display ? (
+              <span role="img" aria-label="mieru">
+                👀
+              </span>
+            ) : (
+              <span role="img" aria-label="miezaru">
+                🐒
+              </span>
+            )}
+          </button>
+        </div>
+        <Palette colors={colors} handlePickColor={handlePickColor} />
+        <canvas
+          ref={canvasRef}
+          width={canvasSize.width}
+          height={canvasSize.height}
         />
-        <button onClick={handleDisplayValue} name="main">
-          {main.display ? (
-            <span role="img" aria-label="mieru">
-              👀
-            </span>
-          ) : (
-            <span role="img" aria-label="miezaru">
-              🐒
-            </span>
-          )}
-        </button>
+        <a href={dataURL} target="_blank" download="" className="btn">
+          download
+        </a>
       </div>
-      <div className="input">
-        <input
-          value={sub.title}
-          type="text"
-          name="sub"
-          onChange={handleTitleValue}
-          className={`${sub.display ? "" : "hidden"}`}
-          disabled={!sub.display}
-        />
-        <button onClick={handleDisplayValue} name="sub">
-          {sub.display ? (
-            <span role="img" aria-label="mieru">
-              👀
-            </span>
-          ) : (
-            <span role="img" aria-label="miezaru">
-              🐒
-            </span>
-          )}
-        </button>
-      </div>
-      <Palette colors={colors} handlePickColor={handlePickColor} />
-      <canvas
-        ref={canvasRef}
-        width={canvasSize.width}
-        height={canvasSize.height}
-      />
-      <a href={dataURL} target="_blank" download="" className="btn">
-        download
-      </a>
-    </div>
+      <footer style={{ fontSize: "12px", padding: "8px" }}>
+        ©
+        <a
+          href="https://twitter.com/ksyunnnn"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "inherit" }}
+        >
+          ksyunnnn
+        </a>
+      </footer>
+    </>
   );
 };
 
